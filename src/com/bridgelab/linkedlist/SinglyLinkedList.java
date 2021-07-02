@@ -112,7 +112,41 @@ public class SinglyLinkedList
 			newNode.nextNode = tempNode.nextNode;
 			tempNode.nextNode = newNode;
 		}
-		
+	}
+	
+	/**
+	 * Name : deleteAt
+	 * 
+	 * Description : Deleting node as per index number provided.
+	 * 
+	 * @param index
+	 * 
+	 * Algorithm : method takes index number as input checks if it is 0 then it will delete the first node
+	 * or else it will traverse till that index number and it will break the link between the consecutive node.
+	 * 
+	 *  Modification : First commit 02-July-2021
+	 */
+	public void deleteAt(int index)
+	{
+		//if index value is 0 then deleting first element.
+		if(index == 0)
+		{
+			head = head.nextNode;
+		}
+		// if index value is not 0 something else.
+		else
+		{
+			Node tempNode = head;
+			Node tempNodeTwo = null;
+			
+			for(int i=0; i<index-1; i++)
+			{
+				tempNode = tempNode.nextNode;
+			}
+			tempNodeTwo = tempNode.nextNode;
+			tempNode.nextNode = tempNodeTwo.nextNode;
+			System.out.println("Element we are deleting is : " + tempNodeTwo.data);
+		}
 	}
 	
 	/**
