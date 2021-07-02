@@ -21,7 +21,7 @@ public class SinglyLinkedList
 	 * Algorithm : Creating object of a Node class that will be the new node.
 	 * which accepts int type of data.
 	 * If head is null means there is no node present.
-	 * If head is not null means there is node present and new node will get added next,
+	 * If head is not null means there is node present and new node will get added at first position,
 	 * and new node have reference to the old node. 
 	 * 
 	 * Modification : First commit 02-July-2021
@@ -39,6 +39,37 @@ public class SinglyLinkedList
 		{
 			newNode.nextNode = head;
 			head = newNode;
+		}
+	}
+	
+	/**
+	 * Name : printNode
+	 * 
+	 * Description : Printing LinkedList
+	 * 
+	 * Algorithm : Creating tempNode that will traverse till the last node in while loop
+	 * until it comes to nextNode which is null.
+	 * Printing the current node as tempNode moves forward.
+	 * 
+	 * Modification : First commit 02-July-2021
+	 */
+	public void printNode()
+	{
+		Node tempNode;
+		tempNode = head;
+		
+		if(head == null)
+		{
+			System.out.println("LinkedList is empty !");
+		}
+		else
+		{
+			while(tempNode.nextNode != null)
+			{
+				System.out.print(tempNode.data + " --> ");
+				tempNode = tempNode.nextNode;
+			}
+			System.out.print(tempNode.data + "\n");
 		}
 	}
 }

@@ -4,10 +4,13 @@ public class Main
 {
 	public static void main(String[] args)
 	{
-		SinglyLinkedList linkedlistObject = new SinglyLinkedList();
+		SinglyLinkedList linkedlistAtStartObject = new SinglyLinkedList();
 		//Creating linkedlist node and passing int type data in it.
-		linkedlistObject.addNode(10);
-		linkedlistObject.addNode(20);
-		linkedlistObject.addNode(30);
+		System.out.println("Adding new node at start position :"+"\n");
+		linkedlistAtStartObject.addNode(56);
+		linkedlistAtStartObject.addNode(30);
+		linkedlistAtStartObject.addNode(70);
+		//printing linkedList.
+		linkedlistAtStartObject.printNode();
 	}
 }
