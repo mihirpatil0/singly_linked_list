@@ -43,6 +43,39 @@ public class SinglyLinkedList
 	}
 	
 	/**
+	 * Name : appendAtLast
+	 * 
+	 * Description : Appending newly node at the last.
+	 * 
+	 * @param data
+	 * 
+	 * Algorithm : Traversing the linkedlist using while loop.
+	 * when the nextNode is null comes appending the newly created node to it
+	 * which becomes the last node of linkedlist.
+	 * 
+	 * Modification : First commit 02-July-2021
+	 */
+	public void appendAtLast(int data)
+	{
+		Node newNode = new Node(data);
+		
+		if(head == null)
+		{
+			head = newNode;
+		}
+		else
+		{
+			Node tempNode ;
+			tempNode = head;
+			while(tempNode.nextNode != null)	
+			{
+				tempNode = tempNode.nextNode;
+			}
+			tempNode.nextNode = newNode;
+		}
+	}
+	
+	/**
 	 * Name : printNode
 	 * 
 	 * Description : Printing LinkedList
