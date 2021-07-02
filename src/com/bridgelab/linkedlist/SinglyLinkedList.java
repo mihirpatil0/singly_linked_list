@@ -178,6 +178,27 @@ public class SinglyLinkedList
     }
 	
 	/**
+	 * Name : size
+	 * 
+	 * Description : Printing size of an linkedlist.
+	 * 
+	 * @return
+	 * 
+	 * Modification : First commit 02-June-2021
+	 */
+	public int size()
+	{
+		Node tempNode = this.head;
+		int countSize = 0;
+		while(tempNode != null)
+		{
+			countSize++;
+			tempNode = tempNode.nextNode;
+		}
+		return countSize;
+	}
+	
+	/**
 	 * Name : printNode
 	 * 
 	 * Description : Printing LinkedList
