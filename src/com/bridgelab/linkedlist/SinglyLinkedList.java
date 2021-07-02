@@ -76,6 +76,46 @@ public class SinglyLinkedList
 	}
 	
 	/**
+	 * Name : insertAtLocation
+	 * 
+	 * Description : Inserting new node at specific position.
+	 * 
+	 * @param index
+	 * @param data
+	 * 
+	 * Algorithm : Method takes input as index which holds at what index position
+	 * new node to be added along with the data.
+	 * If index is null calling addNode() method that will create new node.
+	 * else new node will get inserted at the specific index position.
+	 * 
+	 * Modification : First commit 02-July-2021
+	 */
+	public void insertAtLocation(int index, int data)
+	{
+		Node newNode = new Node(data);
+		newNode.data = data;
+		newNode.nextNode = null;
+		
+		/*if index is 0 then calling insertAtStart() function
+		that will insert element at 0'th position.*/
+		if(index == 0)
+		{
+			addNode(data);
+		}
+		else
+		{
+			Node tempNode = head;
+			for(int i=0; i<index-1; i++)
+			{
+				tempNode = tempNode.nextNode;
+			}
+			newNode.nextNode = tempNode.nextNode;
+			tempNode.nextNode = newNode;
+		}
+		
+	}
+	
+	/**
 	 * Name : printNode
 	 * 
 	 * Description : Printing LinkedList
